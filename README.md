@@ -1,56 +1,67 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Property Rental Application
 
-Things you may want to cover:
+This README provides instructions for setting up and running the Property Rental Application.
 
-**Features**
+## Features
 
-      1. Browse and search for rental properties by  type, city, district, net size, rent per month.
-      2. Can add to favourites and remove from favourites.
-      3. It will store all the favourites properties till it was not removed from the favourites by the user.
+1. Browse and search for rental properties by type, city, district, net size, and rent per month.
+2. Add properties to your favorites list and remove them when needed.
+3. The application stores your favorite properties until you remove them.
 
-**Technologies**
+## Technologies
 
-  The application is built using the following technologies:
-      Postgresql: for the database to store movie information, user information, and user actions
-      Ruby: for the core language of Rails framework
-      Rails: Web application framework build in ruby programming language.
-      RSpecs: for automated testing.
+The application is built using the following technologies:
+
+- **Database**: PostgreSQL is used to store property information, user data, and user interactions.
+- **Language**: Ruby serves as the core language for the Rails framework.
+- **Framework**: Rails is a web application framework written in Ruby.
+- **Testing**: RSpec is used for automated testing.
+
+## Prerequisites
+
+Make sure you have the following software installed on your system:
+
+- Ruby 3.2.2
+- Rails 7.0.1
+- Bundler 2.3.5
+- PostgreSQL (PG)
+
+## Getting Started
+
+1. Clone the repository to your local machine.
+
+2. Install the required dependencies:
+
+   ```bash
+   $ bundle install
+
+3. Create the database schema and seed data:
+
+  ```bash
+  $ bundle exec rails db:create db:schema:load db:seed
+
+## Note: bundle exec rails db:seed is neccessary for the credentials for login
+
+**Admin Credentials** 
+      
+  [email: 'admin@gmail.com', password: 'password@admin']
+
+4. Start the application:
+
+  $ bundle exec rails server
+
+5. Make sure the tests pass before pushing changes:
+
+  $ bundle exec rspec spec
+
+## Features
+
+Planned improvements for the application:
+
+- Add the ability for admin users to upload property images.
+
+- Configure a Rake task for scraping properties from the UrHouse website.
 
 
-Prerequisite
-============
-Ruby 3.2.2
-Rails 7.0.1
-Bundler 2.3.5
-PG (~> 1.1)
-
-- Running the app:
-
-You can run the rspec using the following command:
-
-```c
-$ bundle install
-```
-
-```c
-bundle exec rails db:create db:schema:load db:seed
-```
-
-To start
-```c
-bundle exec rails server
-```
-
-Make sure the tests pass before you push the changes by running:
-
-  bundle exec rspec spec
-
-
-What changes we expected to do in future
-
-  Planning to embedded the option of add image for the admin user and also update option of the same.
-
-  If you find a bug or would like to contribute to the application, feel free to open an issue or submit a pull request. Contributions are welcome and appreciated
+If you find a bug or would like to contribute to the application, feel free to open an issue or submit a pull request. Contributions are welcome and appreciated.
